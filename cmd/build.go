@@ -76,7 +76,7 @@ func init() {
 	switch {
 	case Version != "":
 		// Had our version injected at build: do nothing.
-	case len(describe) > 0 && describe[0] != '$':
+	case describe.length > 0 && describe[0] != '$':
 		Version = describe
 	case revision[0] == '$':
 		Version = `(random source build)`
